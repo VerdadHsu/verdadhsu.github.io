@@ -1,97 +1,330 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-* {
-  box-sizing: border-box;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Times New Roman", Times, serif;
+        }
 
-/* Style the header */
-.header {
-  grid-area: header;
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-}
+        body {
+            margin: 20px;
+        }
 
-/* The grid container */
-.grid-container {
-  display: grid;
-  grid-template-areas: 
-    'header header header header header header' 
-    'left left middle middle right right' 
-    'footer footer footer footer footer footer';
-  /* grid-column-gap: 10px; - if you want gap between the columns */
-} 
+        .container {
+            padding: 0.01em 16px;
+            overflow: auto;
+        }
 
-.left,
-.middle,
-.right {
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
+        /* Style the header */
+        .header {
+            padding: 10px;
+            text-align: left;
+            font-size: 36px;
+            font-weight: bold;
+        }
 
-/* Style the left column */
-.left {
-  grid-area: left;
-}
+        .title {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-left: 10px;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-/* Style the middle column */
-.middle {
-  grid-area: middle;
-}
+        .subtitle {
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-/* Style the right column */
-.right {
-  grid-area: right;
-}
+        .subtitle-academic {
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
 
-/* Style the footer */
-.footer {
-  grid-area: footer;
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
-}
+        hr {
+            border: 0;
+            border-top: 1px solid #eee;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .grid-container  {
-    grid-template-areas: 
-      'header header header header header header' 
-      'left left left left left left' 
-      'middle middle middle middle middle middle' 
-      'right right right right right right' 
-      'footer footer footer footer footer footer';
-  }
-}
-</style>
+        .half {
+            width: 49.99999%
+        }
+
+        .we-1st-col {
+            float: left;
+            width: 10%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .we-2nd-col {
+            float: left;
+            width: 30%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .we-3rd-col {
+            float: left;
+            width: 60%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+
+        .gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: right;
+            width: 16.67%;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .gallery {
+                float: none;
+                width: 100%;
+            }
+
+            .we-1st-col {
+                display: none;
+            }
+
+            .we-2nd-col {
+                float: left;
+                width: 100%;
+                margin-top: 0px;
+                padding: 0px;
+            }
+
+            .we-3rd-col {
+                float: left;
+                width: 100%;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                padding: 0px;
+            }
+        }
+
+        .newspaper {
+            column-count: 3;
+            column-gap: 40px;
+            column-rule: 1px solid lightblue;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        ul.skill {
+            list-style-position: inside;
+            list-style-type: square;
+            //list-style-type: none;
+            margin: 0;
+            padding: 10px;
+        }
+
+        ul.ul-header {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+        }
+
+
+
+        h2,
+        h4,
+        h5 {
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="container">
+        <div class="header">Header</div>
+        <img src="self.jpg" alt="Verdad Hsu" class="gallery" />
 
-<h2>CSS Template using Grid 123</h2>
-<p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect.</p>
-<p><strong>Note:</strong> The Grid Layout Module is not supported in Internet Explorer or Edge 15 eand earlier versions.</p>
+        <ul class="ul-header">
+            <li>3 years of experience on iOS App development, mainly with Swift 4
+                (Inculding deploy app on TestFlight and App Store Connect) Currently app
+                on App Store (娛樂百分百)</li>
+            <li>2 year of experience on JavaScript programming, mainly with Angular,
+                Ionic 4</li>
+            <li>1 year on Android App development</li>
+            <li>6 years of experience on J2EE programming, mainly with Spring,
+                Hibernate, Oracle</li>
+            <li>5 years of experience on system analysis and design</li>
+        </ul>
 
-<div class="grid-container">
-  <div class="header">
-    <h2>Header</h2>
+        <p>
+            <i class="material-icons" style="font-size: 28px; color: dimgray;">place</i>Taipei City,
+            台灣&nbsp;&nbsp;<a href="https://github.com/VerdadHsu" target="_blank"><i class="fa fa-github"
+                    style="font-size: 30px; color: dimgray;"></i></a>
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="title">WORK EXPERIENCE</div>
+        <hr />
+        <div class="we-1st-col"></div>
+        <div class="we-2nd-col">
+            <span class="subtitle">CTI TELEVISION CORPORATION</span>
+            <p>System Analyst</p>
+            <p><span style="color: gray;">Sep 2019 – Present</span></p>
+        </div>
+        <div class="we-3rd-col">
+            Analysing requirement and developing application of advertisement scheduler for TV broadcasting.
+            <p>
+                Duties:
+            <ul>
+                <li>Analysing and developing application base on Angular.</li>
+                <li>Design frontend pages about complex input forms for salesman.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="we-1st-col"></div>
+        <div class="we-2nd-col">
+            <span class="subtitle">GALA TELEVISION CORPORATION</span>
+            <p> System Analyst</p>
+            <p> <span style="color: gray;">May 2013 – Aug 2019</span></p>
+
+        </div>
+        <div class="we-3rd-col">Analysing requirement from internal to
+            build technical solutions & complete application of media assets management. Also involved in app
+            developing, colleagues training, and possessing strong analytical and documentation skills.
+            <p>
+                Duties:
+            <ul>
+                <li>Analysing and developing cross platform app (Android & iOS).</li>
+                <li>Experience with TestFlight and App Connect Store.</li>
+                <li>Developing and maintaining internal application which is providing broadcast TV shows and drama in 4
+                    channels every day. (24 hours a day)</li>
+                <li>Providing system which managing all media assets for colleagues to saving data and media file,
+                    searching, reusing files for replaying shows.</li>
+                <li>Study and analysis new technology for improving system efficiency.</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="we-1st-col"></div>
+        <div class="we-2nd-col">
+            <span class="subtitle">WELLTEND CORPORATION</span>
+            <p>Senior Java Developer</p>
+            <p><span style="color: gray;">June 2004 – 2013</span></p>
+        </div>
+        <div class="we-3rd-col">Working with other developers to build
+            technical solutions & complete projects to budgetary and quality requirements. Investigating software
+            problems identified in testing or via support & providing solutions.
+            <p>
+                Duties:
+            <ul>
+                <li>Working with users to establish requirements and determine priorities.</li>
+                <li>Developing new applications, components & functionality to existing systems.</li>
+                <li>Developing new functionalities, both backend and frontend.</li>
+                <li>Technical design and documentation of new applications.</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title">
+            KEY SKILLS AND COMPETENCIES
+        </div>
+        <hr />
+        <ul class="skill">
+            <li>Knowledge of: Swift, Type Script, Ionic, HTML , JAVA, Hibernate, C#.</li>
+            <li>Experience of: Design Patterns, UML, OO, SQL Server.</li>
+            <li>Ability to develop creative solutions for complex problems.</li>
+            <li>Strong Knowledge of relational database design and implementation.</li>
+            <li>Fluent in the current range of Swift /Java/Microsoft C# related technologies.</li>
+            <li>Database experience: Oracle (TOAD) and SQL Server.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="title">
+            ACADEMIC QUALIFICATIONS
+        </div>
+        <hr />
+        <div><span class="subtitle-academic">Bristol Community College (USA)</span>
+            <span style="color:dimgray">1998– 2000</span>
+        </div>
+        <div><span style="padding-left: 10px;">Certificate of Multi-Media Communication and Internet (Dean’s
+                list)</span></div>
+    </div>
+
+
+    <!--
+<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+    <span class="w3-right w3-opacity">1 min</span>
+    <h4>John Doe</h4><br>
+    <hr class="w3-clear">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+        </div>
+        <div class="w3-half">
+          <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
+      </div>
+    </div>
+    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
   </div>
-  
-  <div class="left" style="background-color:#aaa;">Column</div>
-  <div class="middle" style="background-color:#bbb;">Column</div>  
-  <div class="right" style="background-color:#ccc;">Column</div>
-  
-  <div class="footer">
-  <p>Footer</p>
-  </div>
-</div>
 
+  <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+    <span class="w3-right w3-opacity">1 min</span>
+    <h4>Work experience</h4><br>
+    <hr class="w3-clear">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-half">
+          <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+        </div>
+        <div class="w3-half">
+          <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
+      </div>
+    </div>
+  </div>
+
+  -->
+    </div>
 </body>
+
 </html>
