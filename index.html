@@ -26,25 +26,29 @@
         }
 
         .container {
+            margin-top: 2em;
             padding: 0.01em 16px;
             overflow: auto;
         }
 
         /* Style the header */
         .header {
-            padding: 10px;
+
             text-align: left;
-            font-size: 36px;
+            font-size: 2.5em;
+            /* 40px/16=2.5em */
             font-weight: bold;
+            /* padding: 10px; */
         }
 
         .title {
             margin-top: 0px;
             margin-bottom: 0px;
-            padding-left: 10px;
             text-align: left;
-            font-size: 24px;
+            font-size: 1.875em;
+            /* 30px/16=1.875em */
             font-weight: bold;
+            /* padding-left: 10px; */
         }
 
         .subtitle {
@@ -56,6 +60,10 @@
             font-size: 18px;
             font-weight: bold;
             padding-left: 10px;
+        }
+
+        .personal {
+            float: left;
         }
 
         hr {
@@ -71,21 +79,21 @@
 
         .we-1st-col {
             float: left;
-            width: 10%;
+            width: 5%;
             margin-top: 10px;
             padding: 10px;
         }
 
         .we-2nd-col {
             float: left;
-            width: 30%;
+            width: 25%;
             margin-top: 10px;
             padding: 10px;
         }
 
         .we-3rd-col {
             float: left;
-            width: 60%;
+            width: 70%;
             margin-top: 10px;
             padding: 10px;
         }
@@ -152,7 +160,7 @@
         ul.skill {
             list-style-position: inside;
             list-style-type: square;
-            //list-style-type: none;
+            /* list-style-type: none; */
             margin: 0;
             padding: 10px;
         }
@@ -162,8 +170,6 @@
             margin: 0;
             padding: 10px;
         }
-
-
 
         h2,
         h4,
@@ -175,28 +181,40 @@
 
 <body>
     <div class="container">
-        <div class="header">Header</div>
+        <div class="header">Verdad Hsu</div>
         <img src="self.jpg" alt="Verdad Hsu" class="gallery" />
 
+
+        <div><span class="subtitle-academic">Personal Skill</span></div>
         <ul class="ul-header">
-            <li>3 years of experience on iOS App development, mainly with Swift 4
+            <li>Multitasking</li>
+            <li>Open minded</li>
+            <li>Ability to grasp concepts quickly</li>
+            <li>Learn fast</li>
+            <li>Analytical</li>
+        </ul>
+        <div><span class="subtitle-academic">Personal Summary</span></div>
+        <ul class="ul-header">
+            <li>1 year of experience on JavaScript programming, mainly with Angular</li>
+            <li>2 years of experience on iOS App development, mainly with Swift 4
                 (Inculding deploy app on TestFlight and App Store Connect) Currently app
                 on App Store (娛樂百分百)</li>
-            <li>2 year of experience on JavaScript programming, mainly with Angular,
-                Ionic 4</li>
-            <li>1 year on Android App development</li>
-            <li>6 years of experience on J2EE programming, mainly with Spring,
+            <li>14 years of experience on J2EE programming, mainly with Spring,
                 Hibernate, Oracle</li>
-            <li>5 years of experience on system analysis and design</li>
+            <li>12 years of experience on system analysis and design</li>
         </ul>
-
-        <p>
-            <i class="material-icons" style="font-size: 28px; color: dimgray;">place</i>Taipei City,
-            台灣&nbsp;&nbsp;<a href="https://github.com/VerdadHsu" target="_blank"><i class="fa fa-github"
+        <p></p>
+        <div class="personal">
+            <i class="material-icons" style="font-size: 28px; color: dimgray;">place</i>Taipei City,台灣&nbsp;&nbsp;
+            <i class="material-icons" style="font-size: 28px; color: dimgray;">mail</i>smartverdad@gmail.com&nbsp;&nbsp;
+        </div>
+        <div class="personal">
+            <i class="material-icons" style="font-size: 28px; color: dimgray;">phone</i>+886-925263309&nbsp;&nbsp;
+            <a href="https://github.com/VerdadHsu" target="_blank"><i class="fa fa-github"
                     style="font-size: 30px; color: dimgray;"></i></a>
-        </p>
-    </div>
+        </div>
 
+    </div>
     <div class="container">
         <div class="title">WORK EXPERIENCE</div>
         <hr />
@@ -267,12 +285,12 @@
         </div>
         <hr />
         <ul class="skill">
-            <li>Knowledge of: Swift, Type Script, Ionic, HTML , JAVA, Hibernate, C#.</li>
+            <li>Knowledge of: JAVA, SpringBoot, Hibernate, Gradle, Swift, Type Script, HTML ,Angular ,C#.</li>
             <li>Experience of: Design Patterns, UML, OO, SQL Server.</li>
             <li>Ability to develop creative solutions for complex problems.</li>
             <li>Strong Knowledge of relational database design and implementation.</li>
-            <li>Fluent in the current range of Swift /Java/Microsoft C# related technologies.</li>
-            <li>Database experience: Oracle (TOAD) and SQL Server.</li>
+            <li>Fluent in the current range of Java/Swift/Microsoft C# related technologies.</li>
+            <li>Database experience: Oracle(TOAD), MS SQL Server, MySQL.</li>
         </ul>
     </div>
 
@@ -281,11 +299,10 @@
             ACADEMIC QUALIFICATIONS
         </div>
         <hr />
-        <div><span class="subtitle-academic">Bristol Community College (USA)</span>
-            <span style="color:dimgray">1998– 2000</span>
+        <div><span class="subtitle-academic">National Taiwan Ocean University</span>
+            <span style="color:dimgray">1995 – 1999</span>
         </div>
-        <div><span style="padding-left: 10px;">Certificate of Multi-Media Communication and Internet (Dean’s
-                list)</span></div>
+        <div><span style="padding-left: 10px;">Bachelor of Department of Fisheries</span></div>
     </div>
 
 
